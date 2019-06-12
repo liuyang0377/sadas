@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>恒信源集团1111111111</title>
+    <link rel="stylesheet" href="./css/vendors.css">
+    <link rel="stylesheet" href="./css/style.css?t=1547185703294">
+
+    <script>  ; (function () {
+            var time, isset, meta = document.querySelector('meta[name="viewport"]');
+            var scaleInitial = 0;
+            function setviewport() {
+                isset = true;
+                var width = (window.outerWidth || window.innerWidth);
+                if (width > 1300) {
+                    return;
+                }
+                var scale = width / 1300;
+                if (scaleInitial != scale) {
+                    meta.setAttribute('content', 'width=1300,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+                    scaleInitial = scale;
+                    console.log('setviewport', scale)
+                }
+                setTimeout(function () { isset = false; }, 999);
+            }
+            window.addEventListener("resize", function () {
+                if (isset) { return }
+                clearTimeout(time);
+                time = setTimeout(function () { setviewport(); }, 300);
+            });
+            setviewport();
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div class="am-modal am-modal-no-btn " tabindex="-1" id="doc-modal-2">
+        <div class="am-modal-dialog">
+            <img src="./img/tsjy.png" alt="" style="height: 100%;width: 100%;">
+        </div>
+    </div>
+    <div class="am-g hxy-header" ng-controller="headerClr as vm">
+        <!-- <div class="am-alert am-alert-secondary" data-am-alert>
+            <img src="./img/gg.png" alt="">
+            <button type="button" class="am-close">&times;</button>
+        </div> -->
+        <header class="am-topbar am-topbar-inverse ">
+            <div class="am-container">
+
+                <ul class="hxy-menu" ng-class="{'hxy-menu-ie':vm.isIE}">
+                    <li class="hxy-logo">
+                        <img src="./img/logo.png" alt="">
+                    </li>
+                    <li ng-repeat="x in vm.hxyService.headerMenu">
+                        <a ng-href="{{x.linkUrl}}" target="{{x.isBlank?'_blank':'_self'}}">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no" ng-bind="x.name"></div>
+                                <div class="hxy-m-hover" ng-bind="x.englishName">JOIN US</div>
+                            </div>
+                        </a>
+                        <ul class="hxy-submenu" ng-if="x.subMenus.length>0">
+                            <li ng-repeat="y in x.subMenus">
+                                <a ng-href="{{y.linkUrl}}" target="{{y.isBlank?'_blank':'_self'}}" ng-bind="y.name"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li>
+                        <a href="/index.html">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no">首页</div>
+                                <div class="hxy-m-hover">Home</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/news.html">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no">集团动态</div>
+                                <div class="hxy-m-hover">NEWS</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no">关于恒信源</div>
+                                <div class="hxy-m-hover">ABOUT</div>
+                            </div>
+                        </a>
+                        <ul class="hxy-submenu">
+                            <li>
+                                <a href="/introduce.html">集团简介</a>
+                            </li>
+                            <li>
+                                <a href="/core.html">主营项目</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no">合作加盟</div>
+                                <div class="hxy-m-hover">JOIN US</div>
+                            </div>
+                        </a>
+                        <ul class="hxy-submenu">
+                            <li>
+                                <a href="/join.html">加盟要求</a>
+                            </li>
+                            <li>
+                                <a href="/join-c.html">合作加盟</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no">招聘就业</div>
+                                <div class="hxy-m-hover">JOB</div>
+                            </div>
+                        </a>
+                        <ul class="hxy-submenu">
+                            <li>
+                                <a href="/recruit.html">公司招聘</a>
+                            </li>
+                            <li>
+                                <a href="/job.html">就业推荐</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/contact.html">
+                            <div class="hxy-menu-3d">
+                                <div class="hxy-m-no">联系我们</div>
+                                <div class="hxy-m-hover">CONTACT</div>
+                            </div>
+                        </a>
+                    </li> -->
+                    <!-- <li class="hxy-location" ng-click="vm.onOpen()">
+                        <div>
+                            <span>全国</span>
+                            <img src="./img/location.png" alt="">
+                        </div>
+                    </li> -->
+                </ul>
+                <!-- <div class="hxy-location" ng-click="vm.onOpen()">
+                        <div>
+                            <span>全国</span>
+                            <img src="./img/location.png" alt="">
+                        </div>
+                    </div> -->
+            </div>
+        </header>
+    </div>
+<!-- 加盟 -->
+<div class="am-g hxy-header-img">
+    <!-- <img src="./img/hzjm.png" /> -->
+    <img url-banner/>
+
+</div>
+<div class="am-g hxy-column hxy-column-join-tag " ng-controller="joinClr2 as vm">
+    <div class="am-container">
+        <ul class="am-avg-sm-5">
+            <li class="am-vertical-align " ng-click="vm.onActive(1)" ng-class="{'join-tag-active':vm.tagActive==1}">
+                <a href="" class="am-vertical-align-middle">
+                    <i class="join-icon-t1"></i>
+                    <span> 自考学历项目</span>
+                </a>
+                <div></div>
+            </li>
+            <li class="am-vertical-align" ng-click="vm.onActive(2)" ng-class="{'join-tag-active':vm.tagActive==2}">
+                <a href="" class="am-vertical-align-middle">
+                    <i class="join-icon-t2"></i>
+                    <span>幼儿园项目</span>
+                </a>
+                <div></div>
+
+            </li>
+            <li class="am-vertical-align" ng-click="vm.onActive(3)" ng-class="{'join-tag-active':vm.tagActive==3}">
+                <a href="" class="am-vertical-align-middle">
+                    <i class="join-icon-t3"></i>
+                    <span>人力资源服务项目</span>
+                </a>
+                <div></div>
+            </li>
+            <li class="am-vertical-align" ng-click="vm.onActive(4)" ng-class="{'join-tag-active':vm.tagActive==4}">
+                <a href="" class="am-vertical-align-middle">
+                    <i class="join-icon-t4"></i>
+                    <span>智慧校园项目</span>
+                </a>
+                <div></div>
+            </li>
+            <li class="am-vertical-align" ng-click="vm.onActive(5)" ng-class="{'join-tag-active':vm.tagActive==5}">
+                <a href="" class="am-vertical-align-middle">
+                    <i class="join-icon-t5"></i>
+                    <span>云学习平台项目</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="am-g hxy-column hxy-column-join  ">
+    <div class="am-container hxy-column-join-1">
+        <div class="hxy-column-title">
+            <p class="am-text-xxxl">股东合伙人</p>
+            <div class="">
+                <p class="am-text-lg">Equity partner</p>
+            </div>
+            <p>（10位）</p>
+        </div>
+        <div class="hxy-column-body ">
+            <ul class="am-avg-sm-4 join-list">
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-11.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        有办学资质的的社会培训机构校长或负责人
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-12.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        中职中专院校的校长、副校长、教务主任或招就办主任
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-13.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        高职高专院校校长、副校长、系主任、招就办主任、继续教育中心 (成教处)主任
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-14.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        通过学到在线股东会议的审核
+                    </div>
+                </li>
+            </ul>
+            <div class="join-context">
+                <h1>股东合伙人取得条件</h1>
+                <p>投资20万元/人,一个办学资质或身份证只能认购一份,获得一位股东合伙人资格</p>
+            </div>
+        </div>
+    </div>
+    <div class="am-container hxy-column-join-2">
+        <div class="hxy-column-title">
+            <p class="am-text-xxxl">高级渠道合伙人</p>
+            <div class="">
+                <p class="am-text-lg">Senior channel partner</p>
+            </div>
+            <p>（50位）</p>
+        </div>
+        <div class="hxy-column-body ">
+            <ul class="am-avg-sm-5 join-list">
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-21.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        有办学资质的的社会培训机构校长或负责人
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-22.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        中职中专院校的校长、副校长、教务主任或招就办主任
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-23.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        高职高专院校校长、副校长、系主任、招就办主任、继续教育中心 (成教处)主任
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-24.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        有5人以上招生团队成员且有100平米以上固定办公场所的教育咨询公司总经理或高管
+                    </div>
+                </li>
+                <li>
+                    <div class="join-item-img">
+                        <img src="/img/join-25.png" alt="">
+                    </div>
+                    <div class="join-item-txt">
+                        院校辅导员、班主任、招生办老师
+
+                </li>
+            </ul>
+            <div class="join-context">
+                <h1>股东合伙人取得条件</h1>
+                <p>投资20万元/人,一个办学资质或身份证只能认购一份,获得一位股东合伙人资格</p>
+            </div>
+            </div>
+        </div>
+        <div class="am-container hxy-column-join-3">
+            <div class="hxy-column-title">
+                <p class="am-text-xxxl">渠道合伙人</p>
+                <div class="">
+                    <p class="am-text-lg">Senior channel partner</p>
+                </div>
+                <p>（100位）</p>
+            </div>
+            <div class="hxy-column-body ">
+                <ul class="am-avg-sm-5 join-list">
+                    <li>
+                        <div class="join-item-img">
+                            <img src="/img/join-31.png" alt="">
+                        </div>
+                        <div class="join-item-txt">
+                            有办学资质的的社会培训机构校长或负责人
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-item-img">
+                            <img src="/img/join-32.png" alt="">
+                        </div>
+                        <div class="join-item-txt">
+                            中职中专院校的校长、副校长、教务主任或招就办主任
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-item-img">
+                            <img src="/img/join-33.png" alt="">
+                        </div>
+                        <div class="join-item-txt">
+                            高职高专院校校长、副校长、系主任、招就办主任、继续教育中心 (成教处)主任
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-item-img">
+                            <img src="/img/join-34.png" alt="">
+                        </div>
+                        <div class="join-item-txt">
+                            有5人以上招生团队成员且有100平米以上固定办公场所的教育咨询公司总经理或高管
+                        </div>
+                    </li>
+                    <li>
+                        <div class="join-item-img">
+                            <img src="/img/join-45.png" alt="">
+                        </div>
+                        <div class="join-item-txt">
+                            院校辅导员、班主任、招生办老师
+
+                    </li>
+                </ul>
+                <div class="join-context">
+                    <h1>股东合伙人取得条件</h1>
+                    <p>申请人不需要投入资金,可先通过慕课校园审核成为普通合作伙伴,按慕课校园的标准渠道合作价格取得项目的推广权。当普通合作伙伴累计招生人数大袋50人/年以上,可以自动升级为慕课校园渠道合伙人。成为慕课校园渠道合伙人后可享受渠道合伙人的相关权益</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="am-footer am-footer-default hxy-footer">
+            <div class="am-footer-switch" style="padding-top: 0;">
+                <div class="am-container">
+                    <!-- <ul class="am-avg-sm-5">
+                        <li class="hxy-footer-er">
+                            <div>
+                                <img src="https://zos.alipayobjects.com/rmsportal/TrdkqxQcrAUcmYelQUNK.png" alt="">
+                                <h3>订阅号</h3>
+                            </div>
+                            <div>
+                                <img src="https://zos.alipayobjects.com/rmsportal/TrdkqxQcrAUcmYelQUNK.png" alt="">
+                                <h3>服务号</h3>
+                            </div>
+                        </li>
+                        <li style="width: 131px;margin-left: 95px">
+                            <h3>关于我们</h3>
+                            <ul class="am-avg-sm-2">
+                                <li>
+                                    <a href="/introduce.html">公司介绍</a>
+                                </li>
+                                <li>
+                                    <a href="/news.html">媒体关注</a>
+                                </li>
+                                <li>
+                                    <a href="/join-c.html">合作邀请</a>
+                                </li>
+                                <li>
+                                    <a href="/recruit.html">诚聘英才</a>
+                                </li>
+                                <li>
+                                    <a href="/join.html">代理招商</a>
+                                </li>
+                                <li>
+                                    <a href="/join.html">合作推广</a>
+                                </li>
+                                <li>
+                                    <a href="/contact.html">联系我们</a>
+                                </li>
+                                <li>
+                                    <a href="/resource.html">法律声明</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="width: 100px;margin-left: 95px">
+                            <h3>体验中心</h3>
+                            <ul class="am-avg-sm-1">
+                                <li>
+                                    <a href="/data.html">云平台体验</a>
+                                </li>
+                                <li>
+                                    <a href="/data.html">幼儿园入园体验</a>
+                                </li>
+                                <li>
+                                    <a href="/data.html">视频直播</a>
+                                </li>
+                                <li>
+                                    <a href="/data.html">资料中心</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="width: 85px;margin-left: 95px">
+                            <h3>帮助中心</h3>
+                            <ul class="am-avg-sm-1">
+                                <li>
+                                    <a href="">如何注册</a>
+                                </li>
+                                <li>
+                                    <a href="">如何购买</a>
+                                </li>
+                                <li>
+                                    <a href="">APP哪里下载</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="width: 260px;margin-left: 95px">
+                            <h3>对公账户</h3>
+                            <ul class="am-avg-sm-1" style="text-align: left">
+                                <li>
+                                    <a href="">户名：北京恒信源教育文化集团有限公司</a>
+                                </li>
+                                <li>
+                                    <a href="">账号：0200 0076 0904 7603 903</a>
+                                </li>
+                                <li>
+                                    <a href="">银行：中国工商银行股份有限公司</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul> -->
+                    <div class="hxy-footer-phone">
+                        <div>
+                            <img src="./img/phone.png" alt="" width="30" height="30">
+                        </div>
+                        <ul class="am-avg-sm-3">
+                            <li>
+                                咨询热线：010-57165168       
+                            </li>
+                            <li>
+                                投诉建议：010-57165168
+                            </li>
+                            <li>
+                                客服热线：010-57165168
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="am-footer-miscs ">
+                 <p>Copyright © 2019 版权所有：北京恒信源教育文化集团有限公司</p>
+                 <p>技术支持：深圳市学到在线教育科技有限公司 京ICP备19007184号-1</p>
+            </div>
+        </footer>
+        <div class="hxy-right-nav ">
+            <div class="hxy-right-nav-b am-text-middle">
+                <img src="./img/lf1.png" alt="">
+                <div class="hxy-right-nav-hove">
+                    <div>
+                        <img src="./img/wx.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hxy-right-nav-b">
+
+        <img src="./img/lf2.png" alt="">
+        <div class="hxy-right-nav-hove hxy-right-nav-hove-phone">
+                <div>
+                    <p>咨询热线</p>
+                    <p>010-57165168   李小姐</p>
+                    <p>9:00 — 18:00（周一至周五）</p>
+                </div>
+            </div>
+        </div>
+        <div class="hxy-right-nav-b">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2851148356&amp;site=qq&amp;menu=yes">
+                <img src="./img/lf3.png" alt="">
+            </a>
+            <div class="hxy-right-nav-hove hxy-right-nav-hove-phone">
+                <div>
+                    <p>QQ</p>
+                    <p>2851148373 李小姐</p>
+                    <p>9:00 — 18:00（周一至周五）</p>
+                </div>
+            </div>
+        </div>
+        <div class="hxy-right-nav-b">
+            <img src="./img/lf5.png" alt="">
+            <div class="hxy-right-nav-hove hxy-right-nav-hove-phone">
+                <div>
+                    <p>咨询热线</p>
+                    <p>010-57165168</p>
+                    <p>9:00 — 18:00（周一至周五）</p>
+                </div>
+            </div>
+        </div>
+            <!-- <div style="height: 58px;">
+               
+            </div> -->
+            <div data-am-widget="gotop" class="am-gotop am-gotop-fixed ">
+                <a href="#top" title="回到顶部">
+                    <img src="./img/lf4.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="hxy-right-complaint" style="z-index: 9999" ng-controller="complaintClr as vm">
+            <div class="hxy-right-complaint-context am-animation-fade ng-hide" style="animation-duration: 0.2s" ng-show="vm.show">
+                <div class="hxy-right-complaint-head">
+                    <ul class="am-avg-sm-5">
+                        <li ng-repeat="x in vm.list" ng-click="vm.onSelect($index)" style=" cursor: pointer;">
+                            <img ng-src="{{x.select?x.img2:x.img1}}" />
+                        </li>
+                    </ul>
+                </div>
+                <div class="hxy-right-complaint-body">
+                    <textarea ng-model="vm.textarea" cols="30" rows="10" placeholder="请输入您的建议...(不超过200个字)" maxlength="200" style="border: 0"></textarea>
+                </div>
+                <div class="hxy-right-complaint-footer">
+                    <ul class="am-avg-sm-2">
+                        <li class="hxy-btn-close">
+                            <button type="button" class="am-close" ng-click="vm.onShow()">&times;</button>
+                        </li>
+                        <li class="hxy-btn-sub">
+                            <button type="button" class="am-btn am-btn-secondary" ng-click="vm.onSubmit()">发送</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hxy-right-complaint-btn" ng-click="vm.onShow()">
+                <img src="./img/cc.png" alt="">
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <script src="./js/vendors.js"></script>
+        <script src="./js/app.js?t=1547185703294"></script>
+        </body>
+
+        </html>

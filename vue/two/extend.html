@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>vue-extend 扩展实例构造器</title>
+</head>
+<body>
+    <h1>vue-extend 扩展实例构造器</h1>
+    <hr>
+    <author id="author"></author>
+</body>
+</html>
+<script>
+    var authorExtend = Vue.extend({
+        template:"<p><a v-bind:href='authorUrl'>{{authorName}}</a></p>",
+        data:function(){
+            return{
+                authorName:"Jspang",
+                authorUrl:"http://jspang.com"
+            }
+        }
+    })
+    
+    new authorExtend().$mount("#author") //绑定标签
+</script>
