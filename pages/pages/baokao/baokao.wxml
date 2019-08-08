@@ -1,0 +1,199 @@
+<view id="content">
+  <!-- <i-row>
+    <i-col span="24">
+      <image src='../../images/banner2.jpg' class='baokaoImg'></image>
+    </i-col>
+  </i-row> -->
+  <form bindsubmit="bindFormSubmit">
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>考试所在地点:</text>
+      </i-col>
+      <i-col span="17">
+        <input hidden name="childRegionid" id="childRegionid" value='{{id}}' />
+        <input hidden name="regionid" id="regionid" value='{{regionid}}' />
+        <input type='text' name="" value="{{kqName}}" disabled="true" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>考生姓名:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="name" placeholder="请输入考生姓名" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>证件号码:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="certificateNo" placeholder="请输入证件号码" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>出生年月:</text>
+      </i-col>
+      <i-col span="17">
+        <picker mode="date" name="birthday" value="{{dateValue}}" start="1950-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+          当前选择: {{dateValue}}
+        </picker>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>性别:</text>
+      </i-col>
+      <i-col span="17"> 
+        <picker mode="selector" bindchange="genderBindchange" value="{{genderObjectArray[genderIndex].id}}" range="{{genderArray}}" name="gender">
+          <view class="picker">
+            当前选择: {{genderArray[genderIndex]}}
+          </view>
+        </picker>
+      </i-col>
+    </i-row>
+    <!-- <view style="width:100%;border:1rpx solid #ccc;margin-top:3px;"></view> -->
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>文化程度:</text>
+      </i-col>
+      <i-col span="17">
+        <picker mode="selector" bindchange="educationBindchange" value="{{educationObjectArray[educationIndex].id}}" range="{{educationArray}}" name="education">
+          <view class="picker">
+            当前选择: {{educationArray[educationIndex]}}
+          </view>
+        </picker>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>职业:</text>
+      </i-col>
+      <i-col span="17">
+        <picker mode="selector" bindchange="professionBindchange" value="{{professionObjectArray[professionIndex].id}}" range="{{professionArray}}" name="profession">
+          <view class="picker">
+            当前选择: {{professionArray[professionIndex]}}
+          </view>
+        </picker>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>户籍:</text>
+      </i-col>
+      <i-col span="17">
+        <picker mode="selector" bindchange="homeTypeBindchange" value="{{homeTypeObjectArray[homeTypeIndex].id}}" range="{{homeTypeArray}}" name="homeType">
+          <view class="picker">
+            当前选择: {{homeTypeArray[homeTypeIndex]}}
+          </view>
+        </picker>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>政治面貌:</text>
+      </i-col>
+      <i-col span="17">
+        <picker mode="selector" bindchange="politicsBindchange" value="{{politicsObjectArray[politicsIndex].id}}" range="{{politicsArray}}" name="politics">
+          <view class="picker">
+            当前选择: {{politicsArray[politicsIndex]}}
+          </view>
+        </picker>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>民族:</text>
+      </i-col>
+      <i-col span="17">
+        <picker mode="selector" bindchange="nationBindchange" value="{{nationObjectArray[nationIndex].id}}" range="{{nationArray}}" name="nation">
+          <view class="picker">
+            当前选择: {{nationArray[nationIndex]}}
+          </view>
+        </picker>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">通讯地址:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="address" placeholder="请输入通讯地址" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">邮政编码:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="postCode" placeholder="请输入邮政编码" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">工作单位:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="workAddress" placeholder="请输入工作单位" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">联系电话:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="phone" placeholder="请输入联系电话" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>联系手机:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="mphone" placeholder="请输入联系手机" bindblur="checkPhone"/>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">电子邮箱:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="email" placeholder="请输入电子邮箱" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>报考密码:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='password' name="password" placeholder="请输入报考密码" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text"><text class='colorRed'>*</text>确认密码:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='password' name="password2" placeholder="请确认密码" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">找回密码问题:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="question" placeholder="请输入找回密码问题" />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="7">
+        <text class="text">找回密码答案:</text>
+      </i-col>
+      <i-col span="17">
+        <input type='text' name="answer" placeholder="请输入找回密码答案" />
+      </i-col>
+    </i-row>
+    <button type="primary" form-type="submit"> 提交 </button>
+  </form>
+</view>

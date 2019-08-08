@@ -1,0 +1,81 @@
+<view id="content">
+  <i-row i-class="jsBox">
+    <i-col span="24" i-class="Btext">{{zyjsName}}</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">专业介绍</i-col>
+  </i-row>
+  <i-row i-class="jsBox">
+    <i-col span="24" i-class="fontText2">
+      <text>{{zyjsText}}</text>
+    </i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">考试计划</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <i-row i-class="fontText30">
+      <i-col span="13" i-class="textC bgGray">
+        <view class="border">
+          <view>开考课程</view>
+        </view>
+      </i-col>
+      <i-col span="11" i-class="textC bgGray">
+        <view class="border">
+          <view>开考时间</view>
+        </view>
+      </i-col>
+    </i-row>
+    <block wx:for="{{zyjieshao}}" wx:for-item="zyjieshao" wx:key>
+      <i-row i-class="fontText30" wx:for="{{zyjieshao.examCourseList}}" wx:for-item="zyQQ" wx:key>
+        <i-col span="13" i-class="textC">
+          <view class="border">
+            <view>{{zyQQ.courseid}} {{zyQQ.courseName}}</view>
+          </view>
+        </i-col>
+        <i-col span="11" i-class="textC">
+          <view class="border">
+            <view>{{zyjieshao.examDate}}</view>
+          </view>
+        </i-col>
+      </i-row>
+      </block>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">主考院校</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <i-col span="24" i-class="schoolBox">
+      <scroll-view scroll-x="true" class="scrollCss">
+        <!--  display: inline-block-->
+        <view class="schoolX" wx:for="{{yxLogo}}" wx:for-item="yxLogo" wx:key>
+          <view class="yxImgBox">
+            <image src='{{url}}{{yxLogo.logo}}' class='yxImg'></image>
+          </view>
+          <view class='fontText30 yxTexBox'>
+            <text>{{yxLogo.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">学习形式</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <i-col span="24" i-class="fontText">
+      <i-tag class="i-tags" color="blue">
+        社会考试
+      </i-tag>
+    </i-col>
+  </i-row>
+  <i-row i-class="marTop">
+    <i-col span="24" i-class="fontText">
+      <i-button bind:click="handleClick" type="primary">立即报名</i-button>
+    </i-col>
+  </i-row>
+</view>

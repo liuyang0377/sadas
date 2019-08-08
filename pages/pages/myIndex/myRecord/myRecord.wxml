@@ -1,0 +1,22 @@
+<view id="content">
+  <i-row>
+    <i-col span="24">
+    <i-cell-group>
+        <i-cell title="姓名" i-class="wb" value="{{grade[0].name}}"></i-cell>
+        </i-cell-group>
+      <block wx:for="{{grade}}" wx:key="*this">
+      <i-cell-group>
+        <i-cell title="专业名称" i-class="wb" value="{{item.specialityid}} {{item.specialityName}}"></i-cell>
+        <i-cell title="课程名称" i-class="wb" value="{{item.courseid}} {{item.courseName}}"></i-cell>
+        <i-cell title="课程类别" i-class="wb" value="{{item.type}}"></i-cell>
+        <i-cell title="考试成绩" i-class="wb" value="{{item.grade}}"></i-cell>
+      </i-cell-group>
+      </block>
+    </i-col>
+  </i-row>
+  <i-row>
+    <i-col span="24">
+      <i-button type="primary" bind:click="fanhui">返回</i-button>
+    </i-col>
+  </i-row>
+</view>

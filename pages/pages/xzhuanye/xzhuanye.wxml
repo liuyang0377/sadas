@@ -1,0 +1,26 @@
+<view id="content">
+  <i-panel title="考生只能选择一个专业，但考生可以跨专业跨层次（本、专科）选择当次所要参加考试的课程" style="background:rgb(237, 177, 167);">
+  </i-panel>
+  <form bindsubmit="bindFormSubmit">
+    <i-row>
+      <i-col span="24">
+        <i-divider content="选择你要报考的专业"></i-divider>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <input name="specialityRecordid" value="{{specialityRecordid}}" hidden='true' />
+        <input value="{{value}}" disabled="true" />
+        <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" bindchange="bindChange">
+          <picker-view-column>
+            <view wx:for="{{items}}" wx:key style="line-height: 50px">[{{item.classify==6?'专科':'本科'}}] {{item.name}}</view>
+          </picker-view-column>
+        </picker-view>
+      </i-col>
+    </i-row>
+    <view class="button">
+      <button class="rowBtn" type="primary" form-type="submit"> 下一步 </button>
+      <button class="rowBtn" type="warn" catchtap="back"> 返回 </button>
+    </view>
+  </form>
+</view>

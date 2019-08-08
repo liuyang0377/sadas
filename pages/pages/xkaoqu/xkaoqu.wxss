@@ -1,0 +1,35 @@
+page {
+  background: #ebebeb;
+}
+
+#content {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+}
+.title {
+  font-size: 14px;
+  line-height: 40px;
+  border-bottom: 1px solid #ebebeb;
+  /* color:#; */
+}
+.icon{
+  float: right;
+}
+.radioBox{
+  padding: 10px;
+  background: #ebebeb;
+}
+.button {
+  margin-top: 20rpx;
+  width: 95%;
+  z-index: 100;
+  position: fixed;
+  bottom: 5rpx;
+}
+
+form{
+  margin-bottom: 100rpx;
+}

@@ -1,0 +1,7 @@
+<view id="content">
+  <image style="width: {{width}}rpx; height: {{height}}rpx;" mode ="scaleToFill" src="../../images/dlbg.jpg"></image>
+  <view class="box">
+    <button type="primary" catchtap="newlogin">新 生 注 册</button>
+    <button type="primary" catchtap="oldlogin" class="marT">老 生 登 录</button>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<view id="content">
+  <form bindsubmit="formSubmit">
+    <i-row>
+      <i-col span="24">
+        <view class="box">
+          <view class='text'>
+            身份证号 :
+          </view>
+          <view class='dInput'>
+            <input name="username" placeholder="请填写身份证号" auto-focus/>
+          </view>
+        </view>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <view class="box">
+          <view class='text'>
+            密码 :
+          </view>
+          <view class='dInput'>
+            <input name="password" placeholder="请输入密码" password/>
+          </view>
+        </view>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <button type="primary" form-type='submit'>确认登录</button>
+      </i-col>
+    </i-row>
+  </form>
+</view>

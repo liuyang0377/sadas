@@ -1,0 +1,77 @@
+page{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#content{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.lunbo{
+  width: 750rpx;
+  height: 376rpx;
+}
+.imgBox{
+
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.Zytype{
+  text-align: center;
+  font-size:  32rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  border-bottom:1rpx solid #eeeeee;
+}
+
+.active{
+  border-bottom:4rpx solid #1a67ab;
+  color: #1a67ab;
+}
+.flexBox{
+  flex:1;
+  overflow: hidden;
+}
+.content{
+  margin-top: 10rpx;
+  height: 100%;
+}
+.hT100{
+  height: 100%;
+}
+.yxtp{
+  width: 100%;
+  height: 100%;
+}
+.student_information{
+  width: 690rpx;
+  height: 306rpx;
+  margin-bottom: 25rpx;
+}
+.student_information_img{
+  width: 100%;
+  height: 100%;
+}
+.student_information_text{
+  font-size: 28rpx;
+  color: #fff;
+  height: 60rpx;
+  background: #000;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  opacity: 0.6;
+  position: relative;
+  bottom: 60rpx;
+  left: 0;
+}
+button[plain]{
+  border: 0;
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}

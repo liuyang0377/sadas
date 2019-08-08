@@ -1,0 +1,37 @@
+<view id="content">
+  <i-row i-class="jsBox">
+    <i-col span="24">
+      <image src='{{url}}{{xiangqing.pic}}' wx:if="{{xiangqing.pic.length>0}}" class='yxImg'></image>
+    </i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <i-col span="24" i-class="Btext">{{xiangqing.name}}</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">学院简介</i-col>
+  </i-row>
+  <i-row i-class="jsBox">
+    <i-col span="24" i-class="fontText2">
+      <text>{{xiangqing.introduce}}</text>
+    </i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">开设专业</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <i-col span="24" i-class="fontText30 colorRed">注：点击专业可查看考试计划</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <i-row i-class="fontText30" wx:for="{{kaisheZhuanye}}" wx:key>
+      <i-col span="24" i-class="textC" catchtap="kaoshiPlan">
+        <view class="border">
+          <view data-id='{{item.id}}' data-name='{{item.subjectName}}'>{{item.specialityid}} {{item.subjectName}}</view>
+        </view>
+      </i-col>
+    </i-row>
+    <i-row i-class="marTop">
+    </i-row>
+  </i-row>
+</view>

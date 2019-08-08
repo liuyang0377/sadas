@@ -1,0 +1,29 @@
+<view id="content">
+  <i-panel title="报名地点选择 : 报名地点是考生办理报名、领取合格证及电子拍照的地方" style="background:rgb(237, 177, 167);">
+  </i-panel>
+  <form bindsubmit="bindFormSubmit">
+    <i-row>
+      <i-col span="24">
+        <i-divider content="每个时间段选择一门课程"></i-divider>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <block wx:for="{{items}}" wx:for-item="item" wx:for-index="index"  wx:key>
+          <radio-group class="radio-group" name="examCourseid{{index}}">
+            <view class="title" catchtap="open" data-index="{{item.id}}">{{item.examDate}}{{item.segment}}
+              <i-icon type="enter" class='icon {{item.isShow==true?"hidden":""}}' />
+              <i-icon type="unfold" class='icon {{item.isShow==true?"":"hidden"}}' />
+              <view class='radioBox' hidden="{{!item.isShow}}">
+                <label class="radio" wx:for="{{item.examCourseList}}" wx:for-item="itemRegionList" wx:key style='display:block'>
+                  <radio value="{{itemRegionList.id}},{{itemRegionList.courseid}}{{itemRegionList.courseName}}"/>{{itemRegionList.courseid}}{{itemRegionList.courseName}}
+                </label>
+              </view>
+            </view>
+          </radio-group>
+        </block>
+      </i-col>
+    </i-row>
+    <button type="primary" form-type="submit"> 下一步 </button>
+  </form>
+</view>

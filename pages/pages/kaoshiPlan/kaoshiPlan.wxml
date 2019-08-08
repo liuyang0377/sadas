@@ -1,0 +1,40 @@
+<view id="content">
+  <i-row i-class="jsBox marTop">
+    <i-col span="24" i-class="Btext">{{name}}</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    <view class="icon"></view>
+    <i-col span="22" i-class="fontText">考试计划</i-col>
+  </i-row>
+  <i-row i-class="jsBox marTop">
+    
+    <i-row i-class="fontText30">
+      <i-col span="13" i-class="textC bgGray">
+        <view class="border">
+          <view>开考课程</view>
+        </view>
+      </i-col>
+      <i-col span="11" i-class="textC bgGray">
+        <view class="border">
+          <view>开考时间</view>
+        </view>
+      </i-col>
+    </i-row>
+    <i-row i-class="fontText30" wx:for="{{program}}" wx:for-item="program" wx:key>
+    <block wx:for="{{program.examCourseList}}" wx:key>
+      <i-col span="13" i-class="textC">
+        <view class="border">
+          <view>{{item.courseid}} {{item.courseName}}</view>
+        </view>
+      </i-col>
+      <i-col span="11" i-class="textC">
+        <view class="border">
+          <view>{{program.examDate}}</view>
+        </view>
+      </i-col>
+      </block>
+    </i-row>
+    <i-row i-class="marTop">
+    </i-row>
+  </i-row>
+</view>

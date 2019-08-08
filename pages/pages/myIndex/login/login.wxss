@@ -1,0 +1,28 @@
+#content {
+  padding: 0 30rpx;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  min-width: 150rpx;
+  line-height: 80rpx;
+}
+
+.dInput {
+  padding-left: 20rpx;
+  flex: 1;
+  vertical-align: center;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #d7dde4;
+}
+
+button {
+  margin-top: 20rpx;
+}

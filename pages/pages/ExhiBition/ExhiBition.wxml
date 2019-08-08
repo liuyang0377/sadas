@@ -1,0 +1,130 @@
+<view id="content">
+  <!-- <i-row>
+    <i-col span="24">
+      <image src='../../images/banner2.jpg' class='baokaoImg'></image>
+    </i-col>
+  </i-row> -->
+  <form bindsubmit="bindFormSubmit">
+    <block wx:if="{{logins}}">
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{childRegionid}}" title="考试所在地点:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{childRegionid}}" title="拍照地点:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.name}}" title="考生姓名:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{}}" title="考生准考证号:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.birthday}}" title="出生年月:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.certificateNo}}" title="证件号码:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{_gender}}" title="性别:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{education}}" title="文化程度:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{profession}}" title="职业:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{homeType}}" title="户籍:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{politics}}" title="政治面貌:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{nation}}" title="民族:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.address}}" title="通讯地址:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.postCode}}" title="邮政编码:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.workAddress}}" title="工作单位:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.phone}}" title="联系电话:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.mphone}}" title="联系手机:" disabled />
+        </i-col>
+      </i-row>
+      <i-row>
+        <i-col span="24">
+          <i-input value="{{itemData.email}}" title="电子邮箱:" disabled />
+        </i-col>
+      </i-row>
+    </block>
+    <i-row>
+      <i-col span="24">
+        <i-divider content="您需缴纳的费用" color="#ed3f14" lineColor="#ed3f14"></i-divider>
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <i-input value="￥50" title="{{examCourseid0}}:" disabled />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <i-input value="￥50" title="{{examCourseid1}}:" disabled />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <i-input value="￥50" title="{{examCourseid2}}:" disabled />
+      </i-col>
+    </i-row>
+    <i-row>
+      <i-col span="24">
+        <i-input value="￥50" title="{{examCourseid3}}:" disabled />
+      </i-col>
+    </i-row>
+    <!-- <button type="primary" form-type="submit"> 提交 </button> -->
+    <button type="primary" bindtap="baokao"> 确认报考 </button>
+    <!-- <button type="primary" bindtap="uploadImage"> 上传 </button>
+    <image style='width: 100%;height: 200px;' src='{{img_l}}'/> -->
+  </form>
+</view>

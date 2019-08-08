@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/pageIndex/pageIndex",
+    "pages/myIndex/myIndex",
+    "pages/newOldstudent/newOldstudent",
+    "pages/myIndex/login/login",
+    "pages/ExhiBition/ExhiBition",
+    "pages/xkaoqu/xkaoqu",
+    "pages/xkecheng/xkecheng",
+    "pages/baokao/baokao",
+    "pages/xzhuanye/xzhuanye",
+    "pages/myIndex/myXinXi/myXinXi",
+    "pages/myIndex/myRecord/myRecord",
+    "pages/kaoshiPlan/kaoshiPlan",
+    "pages/pageIndex/schoolPages/schoolPages",
+    "pages/pageIndex/majorPages/majorPages",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#1a67ab",
+    "list": [
+      {
+        "pagePath": "pages/pageIndex/pageIndex",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_light.png"
+      },
+      {
+        "pagePath": "pages/newOldstudent/newOldstudent",
+        "text": "报考",
+        "iconPath": "images/bk.png",
+        "selectedIconPath": "images/bkB.png"
+      },
+      {
+        "pagePath": "pages/pageIndex/pageIndex",
+        "text": "发现",
+        "iconPath": "images/cxB.png",
+        "selectedIconPath": "images/cx.png"
+      },
+      {
+        "pagePath": "pages/myIndex/myIndex",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_light.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

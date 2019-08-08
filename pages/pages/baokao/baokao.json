@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "（学生）信息填写",
+  "usingComponents": {
+    "i-input": "../../../dist/input/index",
+    "i-row": "../../../../dist/row/index",
+    "i-col": "../../../../dist/col/index",
+    "i-button": "../../../dist/button/index"
+  }
+}

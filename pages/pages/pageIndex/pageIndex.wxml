@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view id="content">
+  <view>
+    <i-row i-class="imgBox">
+      <i-col span="24">
+        <swiper class="lunbo" indicator-dots="true" indicator-color="#2b5144" indicator-active-color="#1a67ab" autoplay="true" interval="2000" duration="500" circular="true">
+          <block>
+            <swiper-item>
+              <image src="../../images/banner01.jpg" mode="widthFix" class="slide-image" />
+            </swiper-item>
+            <swiper-item>
+              <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" mode="widthFix" class="slide-image" />
+            </swiper-item>
+            <swiper-item>
+              <image src="https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640" class="slide-image" />
+            </swiper-item>
+            <swiper-item>
+              <image src="https://images.unsplash.com/photo-1551446591-142875a901a1?w=640" class="slide-image" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </i-col>
+    </i-row>
+  </view>
+  <view>
+    <i-row i-class="jsBox">
+      <i-col span="12" i-class="Zytype {{current == 0 ? 'active' : ''}}" catchtap="switchSlider" data-index="0">招生专业</i-col>
+      <i-col span="12" i-class="Zytype {{current == 1 ? 'active' : ''}}" catchtap="switchSlider" data-index="1">主考院校</i-col>
+    </i-row>
+  </view>
+  <view class="flexBox">
+    <i-row i-class="jsBox content">
+      <i-col span="24" i-class="hT100">
+        <swiper class="hT100" interval="0" duration="300" current="{{current}}" bindchange='changeSlider'>
+          <block>
+            <swiper-item>
+              <scroll-view class="hT100" scroll-y="true">
+                <i-cell-group>
+                  <i-cell wx:for="{{zymc}}" wx:key title="{{item.subjectName}}" data-index="{{item.id}}" is-link bind:click="linkZhuanye"></i-cell>
+                </i-cell-group>
+              </scroll-view>
+            </swiper-item>
+            <swiper-item>
+              <scroll-view class="hT100" scroll-y="true" bindscrolltolower="actionTolower">
+                <block wx:for="{{yxmc}}" wx:key wx:for-index="index">
+                  <view class="student_information" catchtap="linkyuanxiao" data-index="{{index}}">
+                    <view class="student_information_img">
+                      <image class="yxtp" src='{{url}}{{item.pic}}'></image>
+                    </view>
+                    <view class="student_information_text">
+                      {{item.name}}
+                    </view>
+                  </view>
+                </block>
+                <view hidden="{{loadmoreHidden}}">
+                  <button plain="true" loading="true">玩命加载中...</button>
+                </view>
+              </scroll-view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </i-col>
+    </i-row>
+  </view>
+</view>

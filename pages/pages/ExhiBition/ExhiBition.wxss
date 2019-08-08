@@ -1,0 +1,5 @@
+@import "/pages/baokao/baokao.wxss";
+input{
+  border: none;
+  margin-top: 0;
+}

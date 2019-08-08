@@ -1,0 +1,13 @@
+ @import "/pages/xkaoqu/xkaoqu.wxss";
+ .rowBtn{
+  width:340rpx;
+}
+.button {
+  margin-top: 20rpx;
+  width: 95%;
+  z-index: 100;
+  position: fixed;
+  bottom: 5rpx;
+  display: flex;
+  flex-direction:row;
+}

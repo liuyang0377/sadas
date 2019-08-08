@@ -1,0 +1,21 @@
+<view id="content">
+  <i-row i-class="txBox">
+    <i-col span="24" i-class="txBoxH">
+      <view class='bg'>
+        <image src='../../images/banner.jpg' class='bgimg'></image>
+        <!-- <image src='../../images/touxiang.png' class='bgimgtx'></image>
+        <text class='bgimgwz'>王子涵</text> -->
+      </view>
+    </i-col>
+  </i-row>
+  <i-row i-class="">
+    <i-col span="24" i-class="">
+      <i-cell-group>
+        <i-cell title="我的信息" is-link i-class="wb" catchtap="myXinxi"><image src='../../images/04.png' class='wbImg'></image></i-cell>
+        <i-cell title="我的成绩" is-link i-class="wb" catchtap="mychengji"><image src='../../images/03.png' class='wbImg'></image></i-cell>
+        <i-cell title="考试通知单" is-link i-class="wb" url="/pages/dashboard/index"><image src='../../images/02.png' class='wbImg'></image></i-cell>
+        <i-cell title="购买的课程" is-link i-class="wb" url="/pages/dashboard/index"><image src='../../images/01.png' class='wbImg'></image></i-cell>
+      </i-cell-group>
+    </i-col>
+  </i-row>
+</view>

@@ -1,0 +1,82 @@
+/**app.wxss**/
+
+.fl {
+  float: left;
+}
+.hidden{
+  display: none;
+}
+.marT {
+  margin-top: 10px;
+}
+.textC {
+  text-align: center;
+}
+
+.fontText30 {
+  font-size: 30rpx;
+}
+
+.colorRed {
+  color: red;
+}
+
+.bgGray {
+  background-color: #f1f1f1;
+}
+
+.jsBox {
+  padding: 0 30rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+view {
+  font-family: '微软雅黑';
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+picker {
+  font-size: 14px;
+  margin-top: 5px;
+  padding:14rpx 10px 14rpx 10px;
+  border: 1px solid #d7dde4;
+  border-radius:4px;
+  background: #fff;
+}
+
+input {
+  height: 32px;
+  line-height: 1.5;
+  padding: 0px 7px;
+  margin-top: 5px;
+  font-size: 14px;
+  border: 1px solid #d7dde4;
+  border-radius: 4px;
+  color: #657180;
+  background-color: #fff;
+  background-image: none;
+  cursor: text;
+}
+
+input:hover {
+  border-color: #5cadff;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2rpx rgba(51, 153, 255, 0.2);
+}
