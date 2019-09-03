@@ -11,8 +11,8 @@
     <h1>component组件</h1>
     <hr>
    <div id="app">   
-       <jspang></jspang>
-       <panda></panda>
+       <jspang :hahah="fist"></jspang>
+       <panda v-bind:hre="messages"></panda>
        <jsliu></jsliu>
    </div>
 </body>
@@ -21,19 +21,22 @@
     Vue.component("jspang",{
         data:function(){
             return{
-                count:1
+                count:1+"count++"
             }
         },
-        template:`<div style="color:red;">我是全局的组件{{count}}</div>`
+        template:`<div style="color:red;">我是全局的组件{{hahah}}</div>`,
+        props:["hahah"]
     })
     var app = new Vue({
         el:"#app",
         data:{
-            messages:"hello wordl"
+            messages:"hello wordl",
+            fist:"fist"
         },
         components:{
             "panda":{
-                template:"<div style='color:green;'>我是局部的panda组件</div>"
+                template:"<div style='color:green;'>我是局部{{hre}}的组件</div>",
+                props:["hre"]
             },
             "jsliu":{
                 template:`<div style='color:blue;'>我是局部的jsl biu组件</div>`
