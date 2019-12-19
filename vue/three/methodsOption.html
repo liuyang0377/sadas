@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>methods Option 方法选项</title>
+</head>
+<body>
+    <h1>methods Option 方法选项</h1>
+    <hr>
+    <div id="app">
+       <p>{{num}}</p> 
+        <button @click="add(3,$event)">加加</button>
+        <btn @click.native="add(3,$event)"></btn> <!--//.native 监听原生事件 -->
+    </div>
+    <p> <button onclick="app.add(3)">外部add</button></p> <!--用实例调用 -->
+</body>
+</html>
+<script>
+   
+   var app = new Vue({
+       el:"#app",
+       data:{
+           num:1
+       },
+       methods:{
+            add:function(num,event){
+                this.num+=num
+                console.log(event)  //事件源
+            }
+       },
+       components:{
+           btn:{
+               template:`<button>组件add</button>`
+           }
+       }
+   })
+    
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>computed Option 计算选项</title>
+</head>
+<body>
+    <h1>computed Option 计算选项</h1>
+    <hr>
+    <div id="app">
+        {{newprice}}
+        <p v-for="news in reversNews"> {{news.title}}----{{news.data}}</p>
+    </div>
+</body>
+</html>
+<script>
+    var newList=[
+        {title:"明年继续降费 往来台湾通行证收费每本降至60元",data:"2019/2/2"},
+        {title:"银行年终揽储大战开打：存1万送1斤猪肉 一天送出1000份",data:"2019/2/3"},
+        {title:"美欲阻止敏感技术出口中国 外交部:反对滥用管制限制企业",data:"2019/2/4"},
+        {title:"31省份前11月房地产开发投资排行榜：17地增速超全国",data:"2019/2/5"}
+    ]
+    //在不改变原来数据源的基础上对数据进行改变（不改变原始数据改变输出的值的形式）
+   var app = new Vue({
+       el:"#app",
+       data:{
+           price:"100",
+           newList:newList
+       },
+       computed:{
+            newprice:function(){
+                return "￥"+this.price+"元"
+            },
+            reversNews:function(){
+                return this.newList.reverse()
+            }
+       }
+   })
+    
+</script>

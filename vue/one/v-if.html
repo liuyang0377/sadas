@@ -12,8 +12,8 @@
     <hr>
     <div id="app">
         <div v-if="isLogin">登录成功！</div>
-        <div v-else>请登录！</div>
-        <div v-show="isLogin">sadasdasda</div><!-- 存在但不显示 display：none相当于 -->
+        <div v-else v-on:click="add()">请登录！</div>
+        <div v-show="isLogin">以显示true</div><!-- 存在但不显示 display：none相当于 -->
     </div>
 </body>
 </html>
@@ -22,6 +22,11 @@
         el:"#app",
         data:{
             isLogin:false
+        },
+        methods:{
+            add:function(){
+                this.isLogin=true
+            }
         }
     })
 </script>

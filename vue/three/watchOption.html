@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.js"></script>
+    <title>watch Option 选项 监控数据</title>
+</head>
+<body>
+    <h1>watch Option 选项 监控数据</h1>
+    <hr>
+    <div id="app">
+       <p>今日温度：{{wendu}}</p>
+       <p>今日温度：{{yifu}}</p>
+       <p><button @click="shenggao">升高温度</button></p>
+       <p><button @click="jiangdi">降低温度</button></p>
+    </div>
+    
+</html>
+<script>
+   
+   var app = new Vue({
+       el:"#app",
+       data:{
+           wendu:21,
+           yifu:"夹克长裙"
+       },
+       methods:{
+           shenggao:function(){
+               this.wendu+=5
+           },
+           jiangdi:function(){
+               this.wendu-=5
+           }
+       },
+       watch:{
+           wendu:function(newValue,oldValue){  //方法名要和监听的数据名保持一致
+                if( newValue>=26){
+                    this.yifu="T恤短袖"
+                }else if(newValue<26 && newValue>0){
+                    this.yifu="夹克长裙"
+                }else{
+                    this.yifu="羽绒服"
+                }
+           }
+           
+       }
+   })
+    app.$watch("wendu",function(newValue,oldValue){
+        if( newValue>=26){
+            this.yifu="T恤短袖"
+        }else if(newValue<26 && newValue>0){
+            this.yifu="夹克长裙"
+        }else{
+            this.yifu="羽绒服"
+        }
+    })
+</script>
